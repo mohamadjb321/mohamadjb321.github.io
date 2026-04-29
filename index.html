@@ -1,48 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mohamad Javad Bakhtiaran</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammadjavad Bakhtiaran | Finance and Risk Analyst</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      color: #222;
+      background: #f4f4f2;
+      color: #111;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      line-height: 1.45;
     }
+
+    a {
+      color: #0b315f;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .resume {
+      width: min(980px, calc(100% - 32px));
+      margin: 32px auto;
+      padding: 56px 72px;
+      background: #fff;
+      border: 1px solid #d7d7d7;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 34px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #d8d8d8;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
     h1 {
-      font-size: 28px;
+      color: #0b315f;
+      font-size: clamp(34px, 6vw, 48px);
+      line-height: 1.05;
+      margin-bottom: 8px;
     }
-    h2 {
+
+    .title {
+      color: #333;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      color: #222;
+      font-size: 16px;
+    }
+
+    .section {
       margin-top: 30px;
-      border-bottom: 1px solid #ddd;
+    }
+
+    .section h2 {
+      color: #0b315f;
+      border-bottom: 1px solid #111;
+      font-size: 23px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .summary {
+      text-align: justify;
+    }
+
+    .role {
+      margin-top: 20px;
+    }
+
+    .role-header,
+    .education-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: baseline;
+      gap: 20px;
+    }
+
+    .role h3 {
+      color: #111;
+      font-size: 19px;
+      line-height: 1.25;
+    }
+
+    .date {
+      color: #111;
+      font-size: 17px;
+      font-style: italic;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-top: 5px;
+      text-align: justify;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .project-card {
+      min-height: 178px;
+      padding: 18px;
+      border: 1px solid #d5d5d5;
+      background: #fbfbfa;
+    }
+
+    .project-card h3 {
+      color: #0b315f;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      color: #222;
+      font-size: 16px;
+      text-align: justify;
+    }
+
+    .skills-list strong {
+      color: #111;
+    }
+
+    .footer-note {
+      margin-top: 34px;
+      padding-top: 16px;
+      border-top: 1px solid #d8d8d8;
+      color: #555;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      body {
+        font-size: 16px;
+      }
+
+      .resume {
+        width: min(100% - 20px, 980px);
+        margin: 10px auto;
+        padding: 28px 22px;
+      }
+
+      .site-nav {
+        gap: 12px;
+        font-size: 12px;
+      }
+
+      .role-header,
+      .education-row,
+      .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .date {
+        white-space: normal;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .resume {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .site-nav,
+      .footer-note {
+        display: none;
+      }
     }
   </style>
 </head>
 
 <body>
+  <main class="resume">
+    <nav class="site-nav" aria-label="Portfolio sections">
+      <a href="#summary">Summary</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#publication">Publication</a>
+    </nav>
 
-<h1>Mohamad Javad Bakhtiaran</h1>
-<p>Business Analyst | FP&A | Financial Analysis</p>
+    <header class="hero">
+      <h1>Mohammadjavad Bakhtiaran</h1>
+      <p class="title">Finance and Risk Analyst</p>
+      <p class="contact">
+        Tehran, Iran |
+        <a href="tel:+989124171861">912-417-1861</a> |
+        <a href="mailto:mohamadjb321@gmail.com">mohamadjb321@gmail.com</a> |
+        <a href="https://www.linkedin.com/in/mohammadjavadbakhtiaran">LinkedIn</a>
+      </p>
+    </header>
 
-<h2>About Me</h2>
-<p>Business-oriented financial analyst with experience in FP&A, credit risk, and economic analysis.</p>
+    <section class="section" id="summary">
+      <h2>Summary</h2>
+      <p class="summary">
+        Finance and Risk Analyst with experience in FP&amp;A, credit risk assessment,
+        macroeconomic analysis, and financial modeling. Skilled in P&amp;L analysis,
+        budgeting, forecasting, scenario and sensitivity analysis, and data visualization.
+        Strong analytical mindset with proven ability to improve reporting efficiency,
+        strengthen risk controls, and support strategic decision-making.
+      </p>
+    </section>
 
-<h2>Experience</h2>
-<ul>
-  <li>Senior FP&A – Alibaba</li>
-  <li>Credit Risk Analyst – Digipay</li>
-</ul>
+    <section class="section" id="experience">
+      <h2>Experience</h2>
 
-<h2>Skills</h2>
-<ul>
-  <li>Excel, Python</li>
-  <li>P&L Analysis</li>
-  <li>Financial Modeling</li>
-</ul>
+      <article class="role">
+        <div class="role-header">
+          <h3>Alibaba, Tehran - Senior FP&amp;A Specialist</h3>
+          <p class="date">April 2025 - Present</p>
+        </div>
+        <ul>
+          <li>Prepared P&amp;L statements, variance analyses, and cost analyses for 10 business lines, supporting financial planning, budgeting, and performance evaluation to improve cost control and decision-making.</li>
+          <li>Developed quarterly reports and reporting infrastructure, reducing reporting time by over 50% and improving management reporting efficiency.</li>
+          <li>Performed feasibility assessments and scenario and sensitivity analyses to evaluate business opportunities, with a particular focus on the Hotel and Airline segments.</li>
+          <li>Created dashboards and visualizations using Excel and Power BI to enhance financial insights and decision-making.</li>
+        </ul>
+      </article>
 
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
+      <article class="role">
+        <div class="role-header">
+          <h3>Digipay, Tehran - Credit Risk Analyst</h3>
+          <p class="date">September 2024 - April 2025</p>
+        </div>
+        <ul>
+          <li>Assessed the creditworthiness of major clients, including 20+ large corporations and 2,000+ merchants, using structured credit-risk frameworks to support data-driven credit allocation.</li>
+          <li>Established the company's first Credit Risk Committee and delivered credit-risk reports and portfolio analyses that informed management decisions and contributed to reduced default risk.</li>
+          <li>Led credit-risk monitoring across Credit and BNPL portfolios and collaborated with key functions, including Collections, to strengthen portfolio performance and optimize risk controls.</li>
+        </ul>
+      </article>
 
+      <article class="role">
+        <div class="role-header">
+          <h3>Agah Group, Tehran - Financial Analyst</h3>
+          <p class="date">March 2021 - September 2024</p>
+        </div>
+        <ul>
+          <li>Analyzed and monitored macroeconomic indicators, including liquidity, exchange rates, and monetary base, and prepared analytical reports to support investment strategy and economic assessment.</li>
+          <li>Analyzed 60+ listed companies across industries such as the steel value chain, refining, cement, pharmaceuticals, transportation, and port services.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-header">
+          <h3>Economic Evaluation Projects, Tehran</h3>
+          <p class="date">July 2019 - March 2021</p>
+        </div>
+        <ul>
+          <li>Conducted economic evaluations of production projects, including honey production and canola cultivation.</li>
+          <li>Developed strategies for generating sustainable revenue streams for a traffic training complex in Tehran.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>FP&amp;A Reporting Infrastructure</h3>
+          <p>
+            Built quarterly reporting workflows and management reports that reduced reporting time
+            by more than 50% and improved financial planning visibility.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Credit Risk Committee Setup</h3>
+          <p>
+            Helped establish Digipay's first Credit Risk Committee and delivered portfolio analysis
+            to support credit allocation and risk-control decisions.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Scenario and Sensitivity Analysis</h3>
+          <p>
+            Evaluated business opportunities in Hotel and Airline segments through feasibility
+            assessments, scenario modeling, and sensitivity analysis.
+          </p>
+        </article>
+
+        <article class="project-card">
+          <h3>Macroeconomic and Equity Research</h3>
+          <p>
+            Prepared reports on macroeconomic indicators and analyzed 60+ listed companies across
+            major Iranian industries to support investment strategy.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <h2>Education</h2>
+
+      <div class="education-row">
+        <p><strong>M.A. in Economics</strong> - Tarbiat Modares University <strong>(GPA: 3.63)</strong></p>
+        <p class="date">2017 - 2019</p>
+      </div>
+
+      <div class="education-row">
+        <p><strong>B.Sc. in Power Engineering</strong> - Bu-Ali Sina University</p>
+        <p class="date">2012 - 2017</p>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Skills</h2>
+
+      <ul class="skills-list">
+        <li><strong>Financial Analysis:</strong> P&amp;L analysis, variance analysis, budgeting, forecasting, financial modeling, Excel, Comfar</li>
+        <li><strong>Risk Analysis:</strong> Credit risk assessment, debt portfolio analysis, risk reporting</li>
+        <li><strong>Business Analysis:</strong> KPI tracking, performance analysis, business insights</li>
+        <li><strong>Data Analysis:</strong> Excel, Python, Power BI, data visualization</li>
+        <li><strong>Presentation and Communication:</strong> Advanced PowerPoint, stakeholder communication</li>
+        <li><strong>Core Skills:</strong> Problem-solving, data-driven decision-making, collaboration</li>
+      </ul>
+    </section>
+
+    <section class="section" id="certifications">
+      <h2>Certifications</h2>
+
+      <ul>
+        <li>The Principles of Capital Market (SEO)</li>
+      </ul>
+    </section>
+
+    <section class="section" id="publication">
+      <h2>Selected Publication</h2>
+
+      <ul>
+        <li>
+          Institutional Quality, Foreign Direct Investment, and Renewable Energy Production:
+          Evidence from Eastern European Countries Using a Panel VAR Model (2025) -
+          DOI: <a href="https://doi.org/10.32479/ijeep.20680">10.32479/ijeep.20680</a>
+        </li>
+      </ul>
+    </section>
+
+    <p class="footer-note">
+      Portfolio website based on the CV of Mohammadjavad Bakhtiaran.
+    </p>
+  </main>
 </body>
 </html>
